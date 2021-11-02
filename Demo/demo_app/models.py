@@ -6,6 +6,8 @@ from django.db import models
 class Demo(models.Model):
     title = models.CharField(max_length=25)
     description = models.TextField()
-    image = models.URLField()
-    created_date = models.DateTimeField(auto_now_add=True)
+    image_url = models.URLField()
+    date = models.DateField()
+    category = models.CharField(max_length=25)
+    rating = models.PositiveIntegerField()
     author = models.CharField(max_length=50)
